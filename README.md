@@ -95,10 +95,10 @@ PS: always read the docs for more.
 
 Use the script:
 
-- [makeDockerImage.sh](./scripts/makeDockerImage.sh)
+- [makeDockerImage.sh](./makeDockerImage.sh)
   - to create and export an image (run it from the same folder as Dockerfile).
 
-- [makeDockerfile.sh](./scripts/makeDockerfile.sh)
+- [makeDockerfile.sh](./makeDockerfile.sh)
   - to make a Dockerfile (this runs if makeDockerImage didn't detect a Dockerfile).
 
 Any doubts or questions go to [Docker Docs](https://docs.docker.com/) to see the commands and flags.
