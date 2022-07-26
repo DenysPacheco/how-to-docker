@@ -93,9 +93,12 @@ PS: always read the docs for more.
 
 ## ✨ Caveats
 
-Use the script [makeDocker](./scripts/makeDocker.sh) with the name of the image to load and export an image.
+Use the script:
 
-`./makeDocker.sh app:test`
-to make an image `app:test` and save an `app:test.tar`.
+- [makeDockerImage.sh](./scripts/makeDockerImage.sh)
+  - to create and export an image (run it from the same folder as Dockerfile).
+
+- [makeDockerfile.sh](./scripts/makeDockerfile.sh)
+  - to make a Dockerfile (this runs if makeDockerImage didn't detect a Dockerfile).
 
 Any doubts or questions go to [Docker Docs](https://docs.docker.com/) to see the commands and flags.
