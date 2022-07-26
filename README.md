@@ -5,9 +5,9 @@
 Simple commands to start with Docker 🐋.
 
 - [How to Docker 101](#how-to-docker-101)
-  - [❗ Know before:](#-know-before)
+  - [❗ Know before](#-know-before)
   - [Steps](#steps)
-    - [Build:](#build)
+    - [Build](#build)
     - [Save](#save)
     - [Run (look inside)](#run-look-inside)
     - [Load](#load)
@@ -16,65 +16,72 @@ Simple commands to start with Docker 🐋.
 
 ---
 
-## ❗ Know before:
+## ❗ Know before
 
-**Image**: a "painting" of your application with everything it needs it to run inside.
+**Image**: a *"painting"* of your application with everything it needs to run inside it.
 
 **Container**: The thing that holds the image and runs it.
 
-**Dockerfile**: file with description on how to make and image and instructions to change it / run it.
+**Dockerfile**: file with description on how to make an image and instructions to change it / run it. (See more on [Docker docs](https://docs.docker.com/engine/reference/builder/#format))
 
 PS: always run with `sudo` or do `sudo su`.
 
-and make sure to install [Docker](https://docs.docker.com/) properlly and be able to run it.
+PS2: make sure to install [Docker](https://docs.docker.com/) properly and be able to run it.
+
+*Docker have pre-built images on [DockerHub](https://hub.docker.com/) with pre-installed softwares (like Flask or Node)*
 
 ---
 
 ## Steps
 
-### Build:
-"Builds and image from your code"
+### Build
+
+"Builds an image (more instructions inside the [Dockerfile](Dockerfile))"
 
 `docker build -t app:test .`
-> `-t` flag to be able to name the image
+> `-t` flag to name the image
 >
 > `app` is the name of the application
-> 
+>
 > `test` is a tag to differentiate
 >
 > `.` directory to find the `Dockerfile`
 
 ### Save
-"Export and image to an output file"
+
+"Export an image to an output tar file"
 
 `docker save -o app-test.tar app:test`
-> `-o` flag to be able to name the tar output
+> `-o` flag to name the tar output
 >
-> `app-test.tar` is the name of the output (in this case a compressed file)
+> `app-test.tar` is the name of the output file
 > 
 > `app:test` is the name of the image
 
 ### Run (look inside)
-"Export an image to a tar output file"
+
+"Runs your image on a container and starts the shell inside it"
 
 `docker run -it app:test sh`
 > `-i` allow interaction with the container
 >
-> `-t` to call the tty (console)
+> `-t` calls the tty (console)
 >
 > `app:test` is the name of the image
 > 
 > `sh` to use the shell
 
 ### Load
+
 "Imports the image from a tar input file"
 
 `docker load -i app-test.tar`
 > `-i` flag to designate the input file
 >
-> `app:test` is the name of the image
+> `app-test.tar` is the name of the tar input file
 
 ## Other commands
+
 `docker ps` > List running containers
 
 `docker images` > Lists the local images
@@ -85,9 +92,10 @@ and make sure to install [Docker](https://docs.docker.com/) properlly and be abl
 PS: always read the docs for more.
 
 ## ✨ Caveats
-use the script `makeDocker.sh` with tha name of the image to load and export an image.
+
+Use the script `makeDocker.sh` with the name of the image to load and export an image.
 
 `./makeDocker.sh app:test`
-to make an image `app:test` and save an `app:test.tar`
+to make an image `app:test` and save an `app:test.tar`.
 
 Any doubts or questions go to [Docker Docs](https://docs.docker.com/) to see the commands and flags.
