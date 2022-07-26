@@ -1,6 +1,6 @@
 # How to Docker 101
 
-![Docker](docker.webp)
+![Docker](./assets/docker.webp)
 
 Simple commands to start with Docker 🐋.
 
@@ -55,7 +55,7 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 > `-o` flag to name the tar output
 >
 > `app-test.tar` is the name of the output file
-> 
+>
 > `app:test` is the name of the image
 
 ### Run (look inside)
@@ -68,7 +68,7 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 > `-t` calls the tty (console)
 >
 > `app:test` is the name of the image
-> 
+>
 > `sh` to use the shell
 
 ### Load
@@ -93,7 +93,7 @@ PS: always read the docs for more.
 
 ## ✨ Caveats
 
-Use the script `makeDocker.sh` with the name of the image to load and export an image.
+Use the script [makeDocker](./scripts/makeDocker.sh) with the name of the image to load and export an image.
 
 `./makeDocker.sh app:test`
 to make an image `app:test` and save an `app:test.tar`.
