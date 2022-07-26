@@ -10,8 +10,8 @@ WORKDIR /ProjectApp
 # Sets the folder as the working directory
 # Cleaner and better practive than RUN cd /ProjectApp
 
-COPY * .
-# Copy everything from this folder to inside the image
+COPY src/ ./
+# Copy everything from the src/ folder to inside the image on ProjectApp/
 # Use .dockerignore to ignore files (same as .gitignore)
 
 CMD [ "python", "main.py" ]
