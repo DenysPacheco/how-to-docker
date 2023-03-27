@@ -1,5 +1,7 @@
 # Tutorial Docker 101
 
+🌐 [🇺🇲 English](README.md)
+
 ![Docker](./assets/docker.webp)
 
 Comandos simples para começar com o Docker 🐋.
