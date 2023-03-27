@@ -96,9 +96,9 @@ PS: sempre leia a documentação para saber mais.
 Use o roteiro:
 
 - [makeDockerImage.sh](./makeDockerImage.sh)
-   - para criar e exportar uma imagem (execute-a na mesma pasta que o Dockerfile).
+> para criar e exportar uma imagem (execute-a na mesma pasta que o Dockerfile).
 
 - [makeDockerfile.sh](./makeDockerfile.sh)
-   - para criar um Dockerfile (isso é executado se makeDockerImage não detectou um Dockerfile).
+> para criar um Dockerfile (isso é executado se makeDockerImage não detectou um Dockerfile).
 
 Qualquer dúvida ou pergunta acesse [Docker Docs](https://docs.docker.com/) para ver os comandos e opçãoes.
