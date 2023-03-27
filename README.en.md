@@ -5,7 +5,7 @@
 Simple commands to start with Docker 🐋.
 
 - [How to Docker 101](#how-to-docker-101)
-  - [❗ Know before](#-know-before)
+  - [❗ Concepts](#-concepts)
   - [Steps](#steps)
     - [Build](#build)
     - [Save](#save)
@@ -16,7 +16,7 @@ Simple commands to start with Docker 🐋.
 
 ---
 
-## ❗ Know before
+## ❗ Concepts
 
 **Image**: a *"painting"* of your application with everything it needs to run inside it.
 
@@ -24,7 +24,7 @@ Simple commands to start with Docker 🐋.
 
 **Dockerfile**: file with description on how to make an image and instructions to change it / run it. (See more on [Docker docs](https://docs.docker.com/engine/reference/builder/#format))
 
-PS: always run with `sudo` or do `sudo su`.
+PS: always run with `sudo` or do `sudo su` (or [add docker to the sudo group](https://docs.docker.com/engine/install/linux-postinstall/))..
 
 PS2: make sure to install [Docker](https://docs.docker.com/) properly and be able to run it.
 
@@ -49,7 +49,7 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 
 ### Save
 
-"Export an image to an output tar file"
+"Export an image to an output `.tar` file"
 
 `docker save -o app-test.tar app:test`
 > `-o` flag to name the tar output
@@ -73,7 +73,7 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 
 ### Load
 
-"Imports the image from a tar input file"
+"Imports the image from a `.tar` input file"
 
 `docker load -i app-test.tar`
 > `-i` flag to designate the input file
