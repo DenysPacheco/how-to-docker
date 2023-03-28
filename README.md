@@ -94,7 +94,9 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 `docker images`
 > Lista as imagens locais
 
-`docker image rm app:test` > Exclui uma imagem
+`docker image rm app:test`
+> Exclui uma imagem
+>
 > use o opção `-f` para forçá-lo.
 
 PS: sempre leia a documentação para saber mais.
