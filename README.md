@@ -4,39 +4,39 @@
 
 ![Docker](./assets/docker.webp)
 
-Comandos simples para começar com o Docker 🐋.
+_Comandos simples para começar com o Docker 🐋._
 
 - [Tutorial Docker 101](#tutorial-docker-101)
-  - [❗Conceitos](#conceitos)
-  - [Passos](#passos)
-    - [Construir](#construir)
-    - [Salvar](#salvar)
-    - [Executar (olhe dentro)](#executar-olhe-dentro)
-    - [Carregar](#carregar)
-  - [Outros comandos](#outros-comandos)
+  - [🧠 Conceitos](#-conceitos)
+  - [🐾 Passos](#-passos)
+    - [🏗️ Construir outros](#️-construir-outros)
+    - [💾 Salvar](#-salvar)
+    - [⚙️ Executar (olhe dentro)](#️-executar-olhe-dentro)
+    - [💼 Carregar](#-carregar)
+  - [➕ Outros comandos](#-outros-comandos)
   - [✨ Adendos](#-adendos)
 
 ---
 
-## ❗Conceitos
+## 🧠 Conceitos
 
-**Imagem**: uma *"pintura"* da sua aplicação com tudo que ela precisa para rodar dentro dela.
+**Imagem** 🖼️: uma _"pintura"_ (snapshot) da sua aplicação com tudo que ela precisa para rodar dentro dela.
 
-**Container**: Aquilo que contém a imagem e a executa.
+**Container** 📦: Aquilo que _"segura"_ a imagem e a executa.
 
-**Dockerfile**: arquivo com descrição de como fazer uma imagem e instruções para alterá-la/executá-la. (Veja mais em [Docker docs](https://docs.docker.com/engine/reference/builder/#format))
+**Dockerfile** 📃 : arquivo com descrição de como fazer uma imagem e instruções para alterá-la/executá-la. (Veja mais em [Docker docs](https://docs.docker.com/engine/reference/builder/#format))
 
-PS: sempre execute com `sudo` ou faça `sudo su` (ou [adicione docker ao grupo sudo](https://docs.docker.com/engine/install/linux-postinstall/)).
+_PS: sempre execute com `sudo` ou faça `sudo su` (ou [adicione docker ao grupo sudo](https://docs.docker.com/engine/install/linux-postinstall/))._
 
-PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente e poder executá-lo.
+_PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente e poder executá-lo._
 
-*Docker tem imagens pré-criadas no [DockerHub](https://hub.docker.com/) com softwares pré-instalados (como Flask ou Node)*
+_Docker tem imagens pré-criadas no [DockerHub](https://hub.docker.com/) com softwares pré-instalados (como Flask ou Node)_
 
 ---
 
-## Passos
+## 🐾 Passos
 
-### Construir
+### 🏗️ Construir outros
 
 "Constrói uma imagem (mais instruções dentro do [Dockerfile](Dockerfile))"
 
@@ -47,10 +47,10 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 >
 > `test` é o nome da tag para diferenciar
 >
-> diretório `.` para encontrar o `Dockerfile`
+> diretório `.` (atual) para encontrar o `Dockerfile`
 ---
 
-### Salvar
+### 💾 Salvar
 
 "Exportar uma imagem para um arquivo `.tar` de saída"
 
@@ -62,7 +62,7 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 > `app:test` é o nome da imagem
 ---
 
-### Executar (olhe dentro)
+### ⚙️ Executar (olhe dentro)
 
 "Executa sua imagem em um Container e inicia o shell dentro dela"
 
@@ -76,7 +76,7 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 > `sh` para usar o shell
 ---
 
-### Carregar
+### 💼 Carregar
 
 "Importa a imagem de um arquivo de entrada `.tar`"
 
@@ -86,7 +86,7 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 > `app-test.tar` é o nome do arquivo de entrada tar
 ---
 
-## Outros comandos
+## ➕ Outros comandos
 
 `docker ps`
 > Listar Containers em execução
@@ -99,11 +99,11 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 >
 > use o opção `-f` para forçá-lo.
 
-PS: sempre leia a documentação para saber mais.
+_PS: sempre leia a documentação para saber mais._
 
 ## ✨ Adendos
 
-Use o roteiro:
+Use os scripts:
 
 - [makeDockerImage.sh](./makeDockerImage.sh)
 
