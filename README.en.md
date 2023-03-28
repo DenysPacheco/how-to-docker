@@ -48,6 +48,7 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 > `test` is a tag to differentiate
 >
 > `.` directory to find the `Dockerfile`
+---
 
 ### Save
 
@@ -59,6 +60,7 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 > `app-test.tar` is the name of the output file
 >
 > `app:test` is the name of the image
+---
 
 ### Run (look inside)
 
@@ -72,6 +74,7 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 > `app:test` is the name of the image
 >
 > `sh` to use the shell
+---
 
 ### Load
 
@@ -81,14 +84,19 @@ PS2: make sure to install [Docker](https://docs.docker.com/) properly and be abl
 > `-i` flag to designate the input file
 >
 > `app-test.tar` is the name of the tar input file
+---
 
 ## Other commands
 
-`docker ps` > List running containers
+`docker ps`
+> List running containers
 
-`docker images` > Lists the local images
+`docker images`
+> Lists the local images
 
-`docker image rm app:test` > Deletes an image
+`docker image rm app:test`
+> Deletes an image
+>
 > use flag `-f` to force it.
 
 PS: always read the docs for more.
