@@ -48,6 +48,7 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 > `test` é o nome da tag para diferenciar
 >
 > diretório `.` para encontrar o `Dockerfile`
+---
 
 ### Salvar
 
@@ -59,6 +60,7 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 > `app-test.tar` é o nome do arquivo de saída
 >
 > `app:test` é o nome da imagem
+---
 
 ### Executar (olhe dentro)
 
@@ -72,6 +74,7 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 > `app:test` é o nome da imagem
 >
 > `sh` para usar o shell
+---
 
 ### Carregar
 
@@ -81,12 +84,15 @@ PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente
 > opção `-i` para designar o arquivo de entrada
 >
 > `app-test.tar` é o nome do arquivo de entrada tar
+---
 
 ## Outros comandos
 
-`docker ps` > Listar Containeres em execução
+`docker ps`
+> Listar Containers em execução
 
-`docker images` > Lista as imagens locais
+`docker images`
+> Lista as imagens locais
 
 `docker image rm app:test` > Exclui uma imagem
 > use o opção `-f` para forçá-lo.
@@ -105,4 +111,4 @@ Use o roteiro:
 
 > para criar um Dockerfile (isso é executado se makeDockerImage não detectou um Dockerfile).
 
-Qualquer dúvida ou pergunta acesse [Docker Docs](https://docs.docker.com/) para ver os comandos e opçãoes.
+Qualquer dúvida ou pergunta acesse [Docker Docs](https://docs.docker.com/) para ver os comandos e opções.
