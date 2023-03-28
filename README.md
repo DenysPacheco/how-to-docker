@@ -1,106 +1,108 @@
-# How to Docker 101
+# Tutorial Docker 101
 
-🌐 [🇧🇷 Português](README.pt.md)
+🌐 [🇺🇲 English](README.en.md)
 
 ![Docker](./assets/docker.webp)
 
-Simple commands to start with Docker 🐋.
+Comandos simples para começar com o Docker 🐋.
 
-- [How to Docker 101](#how-to-docker-101)
-  - [❗ Concepts](#-concepts)
-  - [Steps](#steps)
-    - [Build](#build)
-    - [Save](#save)
-    - [Run (look inside)](#run-look-inside)
-    - [Load](#load)
-  - [Other commands](#other-commands)
-  - [✨ Caveats](#-caveats)
-
----
-
-## ❗ Concepts
-
-**Image**: a *"painting"* of your application with everything it needs to run inside it.
-
-**Container**: The thing that holds the image and runs it.
-
-**Dockerfile**: file with description on how to make an image and instructions to change it / run it. (See more on [Docker docs](https://docs.docker.com/engine/reference/builder/#format))
-
-PS: always run with `sudo` or do `sudo su` (or [add docker to the sudo group](https://docs.docker.com/engine/install/linux-postinstall/))..
-
-PS2: make sure to install [Docker](https://docs.docker.com/) properly and be able to run it.
-
-*Docker have pre-built images on [DockerHub](https://hub.docker.com/) with pre-installed softwares (like Flask or Node)*
+- [Tutorial Docker 101](#tutorial-docker-101)
+  - [❗Conceitos](#conceitos)
+  - [Passos](#passos)
+    - [Construir](#construir)
+    - [Salvar](#salvar)
+    - [Executar (olhe dentro)](#executar-olhe-dentro)
+    - [Carregar](#carregar)
+  - [Outros comandos](#outros-comandos)
+  - [✨ Adendos](#-adendos)
 
 ---
 
-## Steps
+## ❗Conceitos
 
-### Build
+**Imagem**: uma *"pintura"* da sua aplicação com tudo que ela precisa para rodar dentro dela.
 
-"Builds an image (more instructions inside the [Dockerfile](Dockerfile))"
+**Container**: Aquilo que contém a imagem e a executa.
+
+**Dockerfile**: arquivo com descrição de como fazer uma imagem e instruções para alterá-la/executá-la. (Veja mais em [Docker docs](https://docs.docker.com/engine/reference/builder/#format))
+
+PS: sempre execute com `sudo` ou faça `sudo su` (ou [adicione docker ao grupo sudo](https://docs.docker.com/engine/install/linux-postinstall/)).
+
+PS2: certifique-se de instalar o [Docker](https://docs.docker.com/) corretamente e poder executá-lo.
+
+*Docker tem imagens pré-criadas no [DockerHub](https://hub.docker.com/) com softwares pré-instalados (como Flask ou Node)*
+
+---
+
+## Passos
+
+### Construir
+
+"Constrói uma imagem (mais instruções dentro do [Dockerfile](Dockerfile))"
 
 `docker build -t app:test .`
-> `-t` flag to name the image
+> opção `-t` para nomear a imagem
 >
-> `app` is the name of the application
+> `app` é o nome do aplicativo
 >
-> `test` is a tag to differentiate
+> `test` é o nome da tag para diferenciar
 >
-> `.` directory to find the `Dockerfile`
+> diretório `.` para encontrar o `Dockerfile`
 
-### Save
+### Salvar
 
-"Export an image to an output `.tar` file"
+"Exportar uma imagem para um arquivo `.tar` de saída"
 
 `docker save -o app-test.tar app:test`
-> `-o` flag to name the tar output
+> opção `-o` para nomear a saída tar
 >
-> `app-test.tar` is the name of the output file
+> `app-test.tar` é o nome do arquivo de saída
 >
-> `app:test` is the name of the image
+> `app:test` é o nome da imagem
 
-### Run (look inside)
+### Executar (olhe dentro)
 
-"Runs your image on a container and starts the shell inside it"
+"Executa sua imagem em um Container e inicia o shell dentro dela"
 
 `docker run -it app:test sh`
-> `-i` allow interaction with the container
+> `-i` permite interação com o container
 >
-> `-t` calls the tty (console)
+> `-t` chama o tty (console)
 >
-> `app:test` is the name of the image
+> `app:test` é o nome da imagem
 >
-> `sh` to use the shell
+> `sh` para usar o shell
 
-### Load
+### Carregar
 
-"Imports the image from a `.tar` input file"
+"Importa a imagem de um arquivo de entrada `.tar`"
 
 `docker load -i app-test.tar`
-> `-i` flag to designate the input file
+> opção `-i` para designar o arquivo de entrada
 >
-> `app-test.tar` is the name of the tar input file
+> `app-test.tar` é o nome do arquivo de entrada tar
 
-## Other commands
+## Outros comandos
 
-`docker ps` > List running containers
+`docker ps` > Listar Containeres em execução
 
-`docker images` > Lists the local images
+`docker images` > Lista as imagens locais
 
-`docker image rm app:test` > Deletes an image
-> use flag `-f` to force it.
+`docker image rm app:test` > Exclui uma imagem
+> use o opção `-f` para forçá-lo.
 
-PS: always read the docs for more.
+PS: sempre leia a documentação para saber mais.
 
-## ✨ Caveats
+## ✨ Adendos
 
-Use the script:
+Use o roteiro:
 
 - [makeDockerImage.sh](./makeDockerImage.sh)
-> to create and export an image (run it from the same folder as Dockerfile).
+
+> para criar e exportar uma imagem (execute-a na mesma pasta que o Dockerfile).
 
 - [makeDockerfile.sh](./makeDockerfile.sh)
-> to make a Dockerfile (this runs if makeDockerImage didn't detect a Dockerfile).
 
-Any doubts or questions go to [Docker Docs](https://docs.docker.com/) to see the commands and flags.
+> para criar um Dockerfile (isso é executado se makeDockerImage não detectou um Dockerfile).
+
+Qualquer dúvida ou pergunta acesse [Docker Docs](https://docs.docker.com/) para ver os comandos e opçãoes.
