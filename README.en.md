@@ -22,7 +22,7 @@ _Simple commands to start with Docker 🐋._
 
 **Image** 🖼️: a _"painting"_ (snapshot) of your application with everything it needs to run inside it.
 
-**Container** 📦: The thing that holds the image and runs it.
+**Container** 📦: The thing that _"holds"_ the image and runs it.
 
 **Dockerfile** 📃: file with description on how to make an image and instructions to change it / run it. (See more on [Docker docs](https://docs.docker.com/engine/reference/builder/#format))
 
