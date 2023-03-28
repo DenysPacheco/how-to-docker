@@ -9,7 +9,7 @@ _Comandos simples para começar com o Docker 🐋._
 - [Tutorial Docker 101](#tutorial-docker-101)
   - [🧠 Conceitos](#-conceitos)
   - [🐾 Passos](#-passos)
-    - [🏗️ Construir outros](#️-construir-outros)
+    - [🏗️ Construir](#️-construir)
     - [💾 Salvar](#-salvar)
     - [⚙️ Executar (olhe dentro)](#️-executar-olhe-dentro)
     - [💼 Carregar](#-carregar)
@@ -36,7 +36,7 @@ _Docker tem imagens pré-criadas no [DockerHub](https://hub.docker.com/) com sof
 
 ## 🐾 Passos
 
-### 🏗️ Construir outros
+### 🏗️ Construir
 
 "Constrói uma imagem (mais instruções dentro do [Dockerfile](Dockerfile))"
 
