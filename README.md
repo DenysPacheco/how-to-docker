@@ -2,7 +2,7 @@
 
 🌐 [🇺🇲 English](README.en.md)
 
-![Docker](./assets/docker.webp)
+![Docker](./assets/docker-logo.webp)
 
 _Comandos simples para começar com o Docker 🐋._
 
