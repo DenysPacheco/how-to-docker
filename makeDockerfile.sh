@@ -9,7 +9,8 @@ language=${language,,}
 source=${source%/}
 source=${source#*./}
 
-dockerfile=$(cat <<EOF
+dockerfile=$(
+    cat <<EOF
 FROM ${language}:alpine
 
 RUN mkdir -p ${app}/${source}/
@@ -22,4 +23,4 @@ CMD [ "${language}", "${main}" ]
 EOF
 )
 
-echo "$dockerfile" > Dockerfile
+echo "$dockerfile" >Dockerfile

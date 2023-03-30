@@ -1,8 +1,8 @@
 #!/bin/bash
 
-isDockerfile=`find . -name 'Dockerfile' | wc -l`
+isDockerfile=$(find . -maxdepth 1 -name 'Dockerfile' | wc -l)
 
-if [ $isDockerfile -eq 0 ];then
+if [ $isDockerfile -eq 0 ]; then
     echo "!! Dockerfile does not exists!"
     echo "Running makeDockerfile.sh:"
     source makeDockerfile.sh
